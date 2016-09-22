@@ -1,0 +1,2 @@
+# MiniProjectHU
+Stock Exchange Predictor
