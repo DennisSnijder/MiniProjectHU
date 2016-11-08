@@ -61,6 +61,110 @@ class Network:
             inputs[x] = 0.5*(desiredOutputs[x]-inputs[x])**2
         return inputs
 
+    def exportWeights(self):
+        export = []
+        for x in self.layers:
+            for y in x.neurons:
+                for z in y.weights:
+                    export.append(z)
+        return export
+
+    def importWeights(self, weights):
+        ex = 0
+        for x in self.layers:
+            for y in x.neurons:
+                for z in y.weights:
+                    z = weights[ex]
+                    ex += 1
+
+class DNA:
+
+    def __init__(self, min, max, length):
+        self.min = min
+        self.max = max
+        self.length = length
+        self.gene = []
+        self.fitness = 0
+
+        for x in range(length):
+            self.gene.append(self.randomGene())
+
+    def randomGene(self):
+        return random.uniform(self.min, self.max)
+
+    def mutate(self, rate):
+        for x in range(self.length):
+            if rate > random.uniform(0.0, 1.0):
+                self.gene[x] = self.randomGene()
+
+    def partner(self, partner, mutationRate):
+        p = random.randrange(0, self.length)
+
+        g1 = self.gene[0:p]
+        g2 = partner.gene[p:]
+
+        child = DNA(self.min, self.max, self.length)
+        child.gene = g1 + g2
+        child.mutate(mutationRate)
+
+        return child
+
+    def getFitness(self):
+        self.fitness = sum(self.gene)
+
+class Population:
+
+    def __init__(self, size, mutationRate, eliminationRate, geneOptions):
+        self.size = size
+        self.mutationRate = mutationRate
+        self.eliminationRate = eliminationRate
+        self.geneOptions = geneOptions
+
+        self.pool = []
+
+        self.currentGeneration = 0
+        self.averageFitness = 0
+        self.bestDNA = DNA(geneOptions[0], geneOptions[1], geneOptions[2])
+
+        for x in range(self.size):
+            self.pool.append(DNA(geneOptions[0], geneOptions[1], geneOptions[2]))
+
+    def calcFitness(self):
+        self.averageFitness = 0
+        for x in range(len(self.pool)):
+            self.pool[x].getFitness()
+            self.averageFitness += self.pool[x].fitness
+        self.averageFitness /= self.size
+
+    def naturalSelection(self):
+        self.matingpool = []
+
+        self.pool = sorted(self.pool, key=lambda fitness: fitness.fitness)
+
+        el = math.floor(self.size * self.eliminationRate)
+
+        for x in range(el):
+            self.pool.pop(0)
+
+        maxFitness = self.pool[-1].fitness
+        self.bestDNA = self.pool[-1]
+
+        for x in range(len(self.pool)):
+            n = round((self.pool[x].fitness / maxFitness)*100)
+            for y in range(n):
+                self.matingpool.append(self.pool[x])
+
+    def crossover(self):
+        n = self.size - len(self.pool)
+        for x in range(n):
+            p1 = random.choice(self.matingpool)
+            p2 = random.choice(self.matingpool)
+            self.pool.append(p1.partner(p2, self.mutationRate))
+
+    def nextGeneration(self):
+        self.calcFitness()
+        self.naturalSelection()
+        self.crossover()
 
 class dataController:
 
@@ -125,8 +229,6 @@ class dataController:
             result.append([x,self.normalise(data[x]['Open'], dataOpenMin, dataOpenMax),self.normalise(data[x]['Close'], dataCloseMin, dataCloseMax),self.normalise(data[x]['High'], dataHighMin, dataHighMax),self.normalise(data[x]['Low'], dataLowMin, dataLowMax), self.normalise(data[x-1]['Close'], dataCloseMin, dataCloseMax)])
 
         return result
-
-
 
 class apiController:
 
