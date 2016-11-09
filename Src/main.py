@@ -10,6 +10,7 @@ import datetime
 from datetime import date, timedelta
 import random
 import math
+import json
 
 class Neuron:
 
@@ -71,10 +72,10 @@ class Network:
 
     def importWeights(self, weights):
         ex = 0
-        for x in self.layers:
-            for y in x.neurons:
-                for z in y.weights:
-                    z = weights[ex]
+        for x in range(len(self.layers)):
+            for y in range(len(self.layers[x].neurons)):
+                for z in range(len(self.layers[x].neurons[y].weights)):
+                    self.layers[x].neurons[y].weights[z] = weights[ex]
                     ex += 1
 
 class DNA:
@@ -109,8 +110,16 @@ class DNA:
 
         return child
 
-    def getFitness(self):
-        self.fitness = sum(self.gene)
+    def getFitness(self, network, inputs, output):
+        self.fitness = 0
+
+        network.importWeights(self.gene)
+        for x in range(len(inputs)):
+            r = network.activate(inputs[x])[0]
+            self.fitness -= (0.5 * (output[x] - r) ** 2)
+
+        self.fitness = -1/self.fitness
+        self.fitness = math.pow(self.fitness, 4)
 
 class Population:
 
@@ -129,10 +138,10 @@ class Population:
         for x in range(self.size):
             self.pool.append(DNA(geneOptions[0], geneOptions[1], geneOptions[2]))
 
-    def calcFitness(self):
+    def calcFitness(self, network, inputs, output):
         self.averageFitness = 0
         for x in range(len(self.pool)):
-            self.pool[x].getFitness()
+            self.pool[x].getFitness(network, inputs, output)
             self.averageFitness += self.pool[x].fitness
         self.averageFitness /= self.size
 
@@ -161,10 +170,11 @@ class Population:
             p2 = random.choice(self.matingpool)
             self.pool.append(p1.partner(p2, self.mutationRate))
 
-    def nextGeneration(self):
-        self.calcFitness()
+    def nextGeneration(self, network, inputs, output):
+        self.calcFitness(network, inputs, output)
         self.naturalSelection()
         self.crossover()
+        self.currentGeneration += 1
 
 class dataController:
 
@@ -245,7 +255,6 @@ class apiController:
 
         self.data = self.quote.get_historical(startDate, endDate)
 
-
 class App:
 
     def __init__(self):
@@ -258,12 +267,17 @@ class App:
         self.optionWindow()
 
     def run(self):
-        mainloop()
+        while True:
+            try:
+                mainloop()
+                break
+            except UnicodeDecodeError:
+                pass
 
     def optionWindow(self):
         self.root.title("MiniProject | Stock Exchange Predictor")
         self.clearView()
-
+        self.export = 'None'
         optionGroup = LabelFrame(self.appView, text="Options", padx=5, pady=5)
 
         symbolLabel = Label(optionGroup, text="Ticker Symbol: ")
@@ -274,7 +288,7 @@ class App:
         self.dataDaysInput = Entry(optionGroup)
 
         importButton = Button(optionGroup, text="Import Existing", command=self.selectImportFile)
-        createButton = Button(optionGroup, text="Create", command=self.loadData)
+        createButton = Button(optionGroup, text="Create", command=self.predictionWindow)
 
         symbolLabel.grid_forget()
         dataDaysLabel.grid_forget()
@@ -301,6 +315,7 @@ class App:
             child.pack_forget()
 
     def loadData(self):
+
         if self.symbolInput.get() == "":
             messagebox.showerror("Error", "No symbol")
             self.optionWindow()
@@ -308,13 +323,11 @@ class App:
             messagebox.showerror("Error", "Need more days as data!")
             self.optionWindow()
 
-        apiConnection = apiController()
-        apiConnection.getData(self.symbolInput.get(), self.dataDaysInput.get())
+        self.apiConnection = apiController()
+        self.apiConnection.getData(self.symbolInput.get(), self.dataDaysInput.get())
 
-
-
-        dataCon = dataController(apiConnection.data)
-        self.data = dataCon.parseData()
+        self.dataCon = dataController(self.apiConnection.data)
+        self.data = self.dataCon.parseData()
 
         #Data
         self.data.reverse()
@@ -322,57 +335,223 @@ class App:
         self.actualData = []
         self.predictedData = []
 
-        #todo: Normalise Data and initialize Pool with NN's
-
         for x in self.data:
             self.actualData.append(x[1])
             self.predictedData.append(x[1])
 
-        self.network = Network([4, 10, 5, 1])
+        # YOU CAN CHANGE NETWORK STRUCTURE AND POOL SETTINGS HERE
+        self.network = Network([4, 5, 1])
+        self.pool = Population(10, 0.01, 0.4, [-5, 5, 25])
+
+        inputs = []
+        desiredOutputs = []
+
+        for x in range(len(self.data)):
+            inputs.append(self.data[x][1:5])
+            desiredOutputs.append(self.data[x][5])
 
         self.calculateGraph()
 
-        self.predictionWindow()
+    def nextGen1(self):
+        inputs = []
+        desiredOutputs = []
 
+        for x in range(len(self.data)):
+            inputs.append(self.data[x][1:5])
+            desiredOutputs.append(self.data[x][5])
+
+        for x in range(1):
+            self.generationLabel.config(text='Generation: {}'.format(self.pool.currentGeneration))
+            self.pool.nextGeneration(self.network, inputs, desiredOutputs)
+            print(self.pool.currentGeneration, "Best Fitness :", self.pool.bestDNA.fitness)
+
+        self.calculateGraph()
+        self.a.clear()
+        self.a.plot(self.actualData)
+        self.a.plot(self.predictedData)
+        self.canvas.draw()
+
+    def nextGen10(self):
+        inputs = []
+        desiredOutputs = []
+
+        for x in range(len(self.data)):
+            inputs.append(self.data[x][1:5])
+            desiredOutputs.append(self.data[x][5])
+
+        for x in range(10):
+            self.generationLabel.config(text='Generation: {}'.format(self.pool.currentGeneration))
+            self.pool.nextGeneration(self.network, inputs, desiredOutputs)
+            print(self.pool.currentGeneration, "Best Fitness :", self.pool.bestDNA.fitness)
+
+        self.calculateGraph()
+        self.a.clear()
+        self.a.plot(self.actualData)
+        self.a.plot(self.predictedData)
+        self.canvas.draw()
+
+    def nextGen100(self):
+        inputs = []
+        desiredOutputs = []
+
+        for x in range(len(self.data)):
+            inputs.append(self.data[x][1:5])
+            desiredOutputs.append(self.data[x][5])
+
+        for x in range(100):
+            self.generationLabel.config(text='Generation: {}'.format(self.pool.currentGeneration))
+            self.pool.nextGeneration(self.network, inputs, desiredOutputs)
+            print(self.pool.currentGeneration, "Best Fitness :", self.pool.bestDNA.fitness)
+
+        self.calculateGraph()
+        self.a.clear()
+        self.a.plot(self.actualData)
+        self.a.plot(self.predictedData)
+        self.canvas.draw()
+
+    def nextGen1000(self):
+        inputs = []
+        desiredOutputs = []
+
+        for x in range(len(self.data)):
+            inputs.append(self.data[x][1:5])
+            desiredOutputs.append(self.data[x][5])
+
+        for x in range(1000):
+            self.generationLabel.config(text='Generation: {}'.format(self.pool.currentGeneration))
+            self.pool.nextGeneration(self.network, inputs, desiredOutputs)
+            print(self.pool.currentGeneration, "Best Fitness :", self.pool.bestDNA.fitness)
+
+        self.calculateGraph()
+        self.a.clear()
+        self.a.plot(self.actualData)
+        self.a.plot(self.predictedData)
+        self.canvas.draw()
 
     def predictionWindow(self):
         self.root.title("MiniProject | Stock Exchange Predictor")
         self.clearView()
+        if(self.export == 'None'):
+            self.loadData()
 
         neuralGroup = LabelFrame(self.appView, text="Neural Network", padx=5, pady=5)
         actionGroup = LabelFrame(self.appView, text="Info & Actions", padx=5, pady=5)
 
-        neuralGroup.grid(sticky=W)
-        actionGroup.grid(sticky=E)
+        neuralGroup.grid(row=1, column=1, sticky=E, pady=10)
+        actionGroup.grid(row=1, column=2, sticky=E, pady=10)
 
-        f = Figure(figsize=(5,5), dpi=100)
-        a = f.add_subplot(111)
-        a.plot(self.actualData)
-        a.plot(self.predictedData)
+        self.generationLabel = Label(actionGroup, text="Generation: {}".format(self.pool.currentGeneration))
 
-        canvas = FigureCanvasTkAgg(f, neuralGroup)
-        canvas.show()
-        canvas.get_tk_widget().pack(expand=True)
+
+        nextGen1 = Button(actionGroup, text="1x Iterations", command=self.nextGen1)
+        nextGen2 = Button(actionGroup, text="10x Iterations", command=self.nextGen10)
+        nextGen3 = Button(actionGroup, text="100x Iterations", command=self.nextGen100)
+        nextGen4 = Button(actionGroup, text="1000x Iterations", command=self.nextGen1000)
+        predictButton = Button(actionGroup, text="Predict tomorrow", command=self.predict)
+        exportButton = Button(actionGroup, text="Export", command=self.exportNetwork)
+        nextGen1.grid_forget()
+        nextGen2.grid_forget()
+        nextGen3.grid_forget()
+        nextGen4.grid_forget()
+        predictButton.grid_forget()
+        exportButton.grid_forget()
+        self.generationLabel.grid_forget()
+        self.generationLabel.grid(row=1, column=1, sticky=E, pady=10)
+
+        nextGen1.grid(row=4, column=1, sticky=E, pady=10)
+        nextGen2.grid(row=5, column=1, sticky=E, pady=10)
+        nextGen3.grid(row=6, column=1, sticky=E, pady=10)
+        nextGen4.grid(row=7, column=1, sticky=E, pady=10)
+        predictButton.grid(row=8, column=1, sticky=E, pady=10)
+        exportButton.grid(row=9, column=1, sticky=E, pady=10)
+
+        self.f = Figure(figsize=(5,5), dpi=100)
+        self.a = self.f.add_subplot(111)
+        self.a.plot(self.actualData)
+        self.a.plot(self.predictedData)
+
+        self.canvas = FigureCanvasTkAgg(self.f, neuralGroup)
+        self.canvas.show()
+        self.canvas.get_tk_widget().pack(expand=True)
 
         self.appView.pack(padx=10, pady=10)
 
-    def selectImportFile(self):
-        print(filedialog.askopenfilename())
+    def predict(self):
+        d = [float(self.dataCon.data[0]['Open']) / self.dataCon.Open, float(self.dataCon.data[0]['Close']) / self.dataCon.Close, float(self.dataCon.data[0]['High']) / self.dataCon.High, float(self.dataCon.data[0]['Low']) / self.dataCon.Low]
+        self.network.importWeights(self.pool.bestDNA.gene)
+        result = self.network.activate(d)[0] * self.dataCon.Close
+        result = round(result, 2)
+        messagebox.showinfo('Prediction', "Next day's prediction $"+str(result))
 
-    def importNetwork(self):
-        pass
+    def selectImportFile(self):
+        self.importNetwork(filedialog.askopenfilename())
+
+    def importNetwork(self, path):
+        try:
+            f = open(path, 'r')
+            result = json.loads(f.read())
+            self.export = result
+            f.close()
+
+        except:
+            messagebox.showerror("Error", "Something went wrong")
+        self.initExport()
+
+    def initExport(self):
+        self.apiConnection = apiController()
+        self.apiConnection.data = self.export['apiConnectionData']
+        self.dataCon = dataController(self.export['apiConnectionData'])
+        self.data = self.dataCon.parseData()
+        #Data
+        self.data.reverse()
+        self.actualData = []
+        self.predictedData = []
+        for x in self.data:
+            self.actualData.append(x[1])
+            self.predictedData.append(x[1])
+        # YOU CAN CHANGE NETWORK STRUCTURE AND POOL SETTINGS HERE
+        self.network = Network([4, 20, 20, 1])
+        self.pool = Population(100, 0.01, 0.4, [-5, 5, 500])
+        for x in range(len(self.pool.pool)):
+            self.pool.pool[x].gene = self.export['pool'][x]['gene']
+            self.pool.pool[x].fitness = float(self.export['pool'][x]['fitness'])
+        self.pool.currentGeneration = int(self.export['currentGeneration'])
+        self.pool.averageFitness = float(self.export['averageFitness'])
+        self.pool.bestDNA.gene = self.export['bestDNAgene']
+        self.pool.bestDNA.fitness = float(self.export['bestDNAfitness'])
+        inputs = []
+        desiredOutputs = []
+        for x in range(len(self.data)):
+            inputs.append(self.data[x][1:5])
+            desiredOutputs.append(self.data[x][5])
+        self.calculateGraph()
+        self.predictionWindow()
 
     def exportNetwork(self):
-        pass
+        export = {}
+        export['apiConnectionData'] = self.apiConnection.data
+        export['pool'] = []
+        for x in range(len(self.pool.pool)):
+            export['pool'].append({'gene': self.pool.pool[x].gene, 'fitness': self.pool.pool[x].fitness})
+        export['currentGeneration'] = self.pool.currentGeneration
+        export['averageFitness'] = self.pool.averageFitness
+        export['bestDNAgene'] = self.pool.bestDNA.gene
+        export['bestDNAfitness'] = self.pool.bestDNA.fitness
+        try:
+            filen = filedialog.asksaveasfile().name
+            f = open(filen, 'w')
+            f.write(json.dumps(export))
+            f.close()
+        except:
+            messagebox.showerror("Error", "Something went wrong")
 
     def calculateGraph(self):
         inputList = []
         self.predictedData = []
+        self.network.importWeights(self.pool.bestDNA.gene)
         for x in range(len(self.data)):
             inputList.append([self.data[x][1], self.data[x][2], self.data[x][3], self.data[x][4]])
             self.predictedData.append(self.network.activate(inputList[x]))
-
-
 
 MiniProject = App()
 MiniProject.run()
