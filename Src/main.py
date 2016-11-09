@@ -340,8 +340,8 @@ class App:
             self.predictedData.append(x[1])
 
         # YOU CAN CHANGE NETWORK STRUCTURE AND POOL SETTINGS HERE
-        self.network = Network([4, 5, 1])
-        self.pool = Population(10, 0.01, 0.4, [-5, 5, 25])
+        self.network = Network([4, 20, 20, 1])
+        self.pool = Population(100, 0.01, 0.4, [-5, 5, 500])
 
         inputs = []
         desiredOutputs = []
@@ -481,7 +481,7 @@ class App:
         self.network.importWeights(self.pool.bestDNA.gene)
         result = self.network.activate(d)[0] * self.dataCon.Close
         result = round(result, 2)
-        messagebox.showinfo('Prediction', "Next day's prediction $"+str(result))
+        messagebox.showinfo('Prediction', "Next day's Close prediction $"+str(result))
 
     def selectImportFile(self):
         self.importNetwork(filedialog.askopenfilename())
