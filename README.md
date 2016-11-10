@@ -133,9 +133,10 @@ Er is echter zoals altijd wel plaats voor verbetering.
 - Weinig bugs, door vaak te testen kom je deze snel tegen
 - De problemen/bugs die er waren, creatief opgelost
 - Code is relatief netjes geschreven
+<<<<<<< HEAD
 
 </br></br></br>
 
 ##Planning
 
-> Zie: /Design/Planning.xlsx
+> Zie document: /Design/Planning.xlsx
