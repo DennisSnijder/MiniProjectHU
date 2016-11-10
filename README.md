@@ -31,7 +31,7 @@ pip install yahoo_finance
 ##Gebruikte technieken
 ####Neural Networks
 Dit is een techniek om problemen op te lossen op dezelfde manier als dat een menselijk brein dat doet.
-Het probeert patronen te zien in de beurs data die er gegeven wordt
+Het probeert patronen te zien in de beurs data die er gegeven wordt.
 > https://en.wikipedia.org/wiki/Artificial_neural_network
 
 ####Genetic Algorithm
@@ -108,7 +108,7 @@ Een eerder getrainde situatie kan opgeslagen worden, en later worden geïmportee
 
 De gerealiseerde applicatie heeft een aantal kleine verschillen met het orginele ontwerp.
 Zo is er geen Option `Window Controller, Graph Window Controller, en Import/Export Controller`, maar worden deze 
-allemaal gehandled door de `App` class
+allemaal gehandled door de `App` class.
 
 </br></br></br>
 
