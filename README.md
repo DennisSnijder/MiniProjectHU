@@ -10,7 +10,7 @@ Dit uitgebreide MiniProject is als afsluiting voor de cursus 'Python Programming
 
 De applicatie heeft als doel om van een beurs genoteerd bedrijf, een koers analyse te maken,
 om vervolgens een poging te doen om een voorspelling te maken.
-
+</br></br></br>
 ##Benodigdheden
 
 Python Versie `3.5.4`
@@ -26,6 +26,7 @@ pip install tkinter
 pip install matplotlib
 pip install yahoo_finance
 ```
+</br></br></br>
 
 ##Gebruikte technieken
 ####Neural Networks
@@ -38,6 +39,8 @@ Een genetisch algoritme wordt hier gebruikt als optimalisatie techniek voor een 
 Het werkt op dezelfde manier als de evolutie, en probeert in deze toepassing een Neural Network te maken
 die zo goed mogelijk aansluit op de beurs data.
 > https://en.wikipedia.org/wiki/Genetic_algorithm
+
+</br></br></br>
 
 ##Programmastructuur
 De applicatie is opgedeeld in 5 onderdelen, die op elkaar aansluiten. 
@@ -83,6 +86,7 @@ Input layer: 4 Neurons
 Hidden layer: 15 Neurons
 Output layer: 1 Neuron
 ```
+</br></br></br>
 
 ##Applicatie Flow
 
@@ -91,8 +95,12 @@ Daarom een meer globale flow:
 
 ![alt tag](http://www.matthiaskrijgsman.nl/HUProject/MiniProjectDiagram.png)
 
+</br></br></br>
+
 ##Extra functionaliteiten
 Een eerder getrainde situatie kan opgeslagen worden, en later worden geïmporteerd.
+
+</br></br></br>
 
 ##Afwijkingen van orgineel ontwerp
 
@@ -102,6 +110,26 @@ De gerealiseerde applicatie heeft een aantal kleine verschillen met het orginele
 Zo is er geen Option `Window Controller, Graph Window Controller, en Import/Export Controller`, maar worden deze 
 allemaal gehandled door de `App` class
 
+</br></br></br>
+
 ##Voorbeeld (Screencast)
 [![Screencast](https://img.youtube.com/vi/wRUugPL6Mzw/0.jpg)](https://www.youtube.com/watch?v=wRUugPL6Mzw)
 > https://www.youtube.com/watch?v=wRUugPL6Mzw
+
+</br></br></br>
+
+##Zelfreflectie
+Ik vond het ontwerpen en realisatie van de applicatie prettig verlopen, daarnaast ben ik ook erg tevreden met het resultaat.
+Er is echter zoals altijd wel plaats voor verbetering.
+</br></br>
+####Verbeterpunten:
+- Op voorhand beter onderzoek doen naar de onderwerpen waarmee je te maken krijgt
+- Vóór het programmeren eerst een gedetailleerde flow maken zodat duidelijk is hoe de applicatie **exact** moet gaan werken
+- Meer tijd besteden aan het optimaliseren van de Algoritmen
+</br></br>
+
+####Sterke punten:
+- Onderweg relatief weinig problemen tegengekomen
+- Weinig bugs, door vaak te testen kom je deze snel tegen
+- De problemen/bugs die er waren, creatief opgelost
+- Code is relatief netjes geschreven
