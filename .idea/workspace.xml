@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f446292-0dde-4b0f-b052-cadbaa46e510" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Planning/Planning.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Src/neuralNetwork.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Design/Design.docx" afterPath="$PROJECT_DIR$/Design/Design.docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Src/main.py" afterPath="$PROJECT_DIR$/Src/main.py" />
     </list>
     <ignored path="MiniProjectHU.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,36 +28,37 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="0">
-                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
             </state>
+          </provider>
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Src/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="362" column="0" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#370#765#0" expanded="false" />
+                <element signature="e#785#1137#0" expanded="false" />
+                <element signature="e#1159#2324#0" expanded="false" />
+                <element signature="e#2342#3463#0" expanded="false" />
+                <element signature="e#5281#7271#0" expanded="false" />
                 <element signature="e#5527#7271#0" expanded="false" />
+                <element signature="e#7299#7827#0" expanded="false" />
                 <element signature="e#7873#8038#0" expanded="false" />
                 <element signature="e#8067#8204#0" expanded="false" />
                 <element signature="e#9641#9716#0" expanded="false" />
-                <element signature="e#9751#10865#0" expanded="false" />
-                <element signature="e#10899#11527#0" expanded="false" />
-                <element signature="e#11562#12191#0" expanded="false" />
-                <element signature="e#12227#12857#0" expanded="false" />
-                <element signature="e#12894#13525#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -85,8 +87,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -113,6 +115,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -147,7 +150,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -381,13 +383,13 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1864139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2016317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -395,7 +397,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -426,9 +428,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -438,13 +437,8 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Src/main.py">
@@ -453,23 +447,21 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#370#765#0" expanded="false" />
+            <element signature="e#785#1137#0" expanded="false" />
+            <element signature="e#1159#2324#0" expanded="false" />
+            <element signature="e#2342#3463#0" expanded="false" />
+            <element signature="e#5281#7271#0" expanded="false" />
             <element signature="e#5527#7271#0" expanded="false" />
+            <element signature="e#7299#7827#0" expanded="false" />
             <element signature="e#7873#8038#0" expanded="false" />
             <element signature="e#8067#8204#0" expanded="false" />
             <element signature="e#9641#9716#0" expanded="false" />
-            <element signature="e#9751#10865#0" expanded="false" />
-            <element signature="e#10899#11527#0" expanded="false" />
-            <element signature="e#11562#12191#0" expanded="false" />
-            <element signature="e#12227#12857#0" expanded="false" />
-            <element signature="e#12894#13525#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -479,38 +471,32 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
     <entry file="file://$PROJECT_DIR$/Src/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#370#765#0" expanded="false" />
+            <element signature="e#785#1137#0" expanded="false" />
+            <element signature="e#1159#2324#0" expanded="false" />
+            <element signature="e#2342#3463#0" expanded="false" />
+            <element signature="e#5281#7271#0" expanded="false" />
             <element signature="e#5527#7271#0" expanded="false" />
+            <element signature="e#7299#7827#0" expanded="false" />
             <element signature="e#7873#8038#0" expanded="false" />
             <element signature="e#8067#8204#0" expanded="false" />
             <element signature="e#9641#9716#0" expanded="false" />
-            <element signature="e#9751#10865#0" expanded="false" />
-            <element signature="e#10899#11527#0" expanded="false" />
-            <element signature="e#11562#12191#0" expanded="false" />
-            <element signature="e#12227#12857#0" expanded="false" />
-            <element signature="e#12894#13525#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -520,38 +506,32 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
     <entry file="file://$PROJECT_DIR$/Src/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#370#765#0" expanded="false" />
+            <element signature="e#785#1137#0" expanded="false" />
+            <element signature="e#1159#2324#0" expanded="false" />
+            <element signature="e#2342#3463#0" expanded="false" />
+            <element signature="e#5281#7271#0" expanded="false" />
             <element signature="e#5527#7271#0" expanded="false" />
+            <element signature="e#7299#7827#0" expanded="false" />
             <element signature="e#7873#8038#0" expanded="false" />
             <element signature="e#8067#8204#0" expanded="false" />
             <element signature="e#9641#9716#0" expanded="false" />
-            <element signature="e#9751#10865#0" expanded="false" />
-            <element signature="e#10899#11527#0" expanded="false" />
-            <element signature="e#11562#12191#0" expanded="false" />
-            <element signature="e#12227#12857#0" expanded="false" />
-            <element signature="e#12894#13525#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -561,38 +541,32 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-          <folding />
-        </state>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
     <entry file="file://$PROJECT_DIR$/Src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#370#765#0" expanded="false" />
+            <element signature="e#785#1137#0" expanded="false" />
+            <element signature="e#1159#2324#0" expanded="false" />
+            <element signature="e#2342#3463#0" expanded="false" />
+            <element signature="e#5281#7271#0" expanded="false" />
             <element signature="e#5527#7271#0" expanded="false" />
+            <element signature="e#7299#7827#0" expanded="false" />
             <element signature="e#7873#8038#0" expanded="false" />
             <element signature="e#8067#8204#0" expanded="false" />
             <element signature="e#9641#9716#0" expanded="false" />
-            <element signature="e#9751#10865#0" expanded="false" />
-            <element signature="e#10899#11527#0" expanded="false" />
-            <element signature="e#11562#12191#0" expanded="false" />
-            <element signature="e#12227#12857#0" expanded="false" />
-            <element signature="e#12894#13525#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -602,39 +576,68 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-          <folding />
-        </state>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
     <entry file="file://$PROJECT_DIR$/Src/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#370#765#0" expanded="false" />
+            <element signature="e#785#1137#0" expanded="false" />
+            <element signature="e#1159#2324#0" expanded="false" />
+            <element signature="e#2342#3463#0" expanded="false" />
+            <element signature="e#5281#7271#0" expanded="false" />
             <element signature="e#5527#7271#0" expanded="false" />
+            <element signature="e#7299#7827#0" expanded="false" />
             <element signature="e#7873#8038#0" expanded="false" />
             <element signature="e#8067#8204#0" expanded="false" />
             <element signature="e#9641#9716#0" expanded="false" />
-            <element signature="e#9751#10865#0" expanded="false" />
-            <element signature="e#10899#11527#0" expanded="false" />
-            <element signature="e#11562#12191#0" expanded="false" />
-            <element signature="e#12227#12857#0" expanded="false" />
-            <element signature="e#12894#13525#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
+    <entry file="file://$PROJECT_DIR$/Src/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#370#765#0" expanded="false" />
+            <element signature="e#785#1137#0" expanded="false" />
+            <element signature="e#1159#2324#0" expanded="false" />
+            <element signature="e#2342#3463#0" expanded="false" />
+            <element signature="e#5281#7271#0" expanded="false" />
+            <element signature="e#5527#7271#0" expanded="false" />
+            <element signature="e#7299#7827#0" expanded="false" />
+            <element signature="e#7873#8038#0" expanded="false" />
+            <element signature="e#8067#8204#0" expanded="false" />
+            <element signature="e#9641#9716#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Src/test.py" />
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -644,38 +647,32 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-          <folding />
-        </state>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
     <entry file="file://$PROJECT_DIR$/Src/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#370#765#0" expanded="false" />
+            <element signature="e#785#1137#0" expanded="false" />
+            <element signature="e#1159#2324#0" expanded="false" />
+            <element signature="e#2342#3463#0" expanded="false" />
+            <element signature="e#5281#7271#0" expanded="false" />
             <element signature="e#5527#7271#0" expanded="false" />
+            <element signature="e#7299#7827#0" expanded="false" />
             <element signature="e#7873#8038#0" expanded="false" />
             <element signature="e#8067#8204#0" expanded="false" />
             <element signature="e#9641#9716#0" expanded="false" />
-            <element signature="e#9751#10865#0" expanded="false" />
-            <element signature="e#10899#11527#0" expanded="false" />
-            <element signature="e#11562#12191#0" expanded="false" />
-            <element signature="e#12227#12857#0" expanded="false" />
-            <element signature="e#12894#13525#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -685,38 +682,32 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-          <folding />
-        </state>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
     <entry file="file://$PROJECT_DIR$/Src/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#370#765#0" expanded="false" />
+            <element signature="e#785#1137#0" expanded="false" />
+            <element signature="e#1159#2324#0" expanded="false" />
+            <element signature="e#2342#3463#0" expanded="false" />
+            <element signature="e#5281#7271#0" expanded="false" />
             <element signature="e#5527#7271#0" expanded="false" />
+            <element signature="e#7299#7827#0" expanded="false" />
             <element signature="e#7873#8038#0" expanded="false" />
             <element signature="e#8067#8204#0" expanded="false" />
             <element signature="e#9641#9716#0" expanded="false" />
-            <element signature="e#9751#10865#0" expanded="false" />
-            <element signature="e#10899#11527#0" expanded="false" />
-            <element signature="e#11562#12191#0" expanded="false" />
-            <element signature="e#12227#12857#0" expanded="false" />
-            <element signature="e#12894#13525#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -726,38 +717,32 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
     <entry file="file://$PROJECT_DIR$/Src/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#370#765#0" expanded="false" />
+            <element signature="e#785#1137#0" expanded="false" />
+            <element signature="e#1159#2324#0" expanded="false" />
+            <element signature="e#2342#3463#0" expanded="false" />
+            <element signature="e#5281#7271#0" expanded="false" />
             <element signature="e#5527#7271#0" expanded="false" />
+            <element signature="e#7299#7827#0" expanded="false" />
             <element signature="e#7873#8038#0" expanded="false" />
             <element signature="e#8067#8204#0" expanded="false" />
             <element signature="e#9641#9716#0" expanded="false" />
-            <element signature="e#9751#10865#0" expanded="false" />
-            <element signature="e#10899#11527#0" expanded="false" />
-            <element signature="e#11562#12191#0" expanded="false" />
-            <element signature="e#12227#12857#0" expanded="false" />
-            <element signature="e#12894#13525#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -767,19 +752,71 @@
           <second_editor />
         </state>
       </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -789,97 +826,13 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Src/test.py" />
     <entry file="file://$PROJECT_DIR$/Src/apiController.py" />
-    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Src/neuralNetwork.py" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -887,17 +840,17 @@
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/tkinter/__init__.py">
@@ -910,19 +863,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="362" column="0" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#370#765#0" expanded="false" />
+            <element signature="e#785#1137#0" expanded="false" />
+            <element signature="e#1159#2324#0" expanded="false" />
+            <element signature="e#2342#3463#0" expanded="false" />
+            <element signature="e#5281#7271#0" expanded="false" />
             <element signature="e#5527#7271#0" expanded="false" />
+            <element signature="e#7299#7827#0" expanded="false" />
             <element signature="e#7873#8038#0" expanded="false" />
             <element signature="e#8067#8204#0" expanded="false" />
             <element signature="e#9641#9716#0" expanded="false" />
-            <element signature="e#9751#10865#0" expanded="false" />
-            <element signature="e#10899#11527#0" expanded="false" />
-            <element signature="e#11562#12191#0" expanded="false" />
-            <element signature="e#12227#12857#0" expanded="false" />
-            <element signature="e#12894#13525#0" expanded="false" />
           </folding>
         </state>
       </provider>

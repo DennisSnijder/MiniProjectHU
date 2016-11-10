@@ -340,8 +340,8 @@ class App:
             self.predictedData.append(x[1])
 
         # YOU CAN CHANGE NETWORK STRUCTURE AND POOL SETTINGS HERE
-        self.network = Network([4, 20, 20, 1])
-        self.pool = Population(100, 0.01, 0.4, [-5, 5, 500])
+        self.network = Network([4, 15, 1])
+        self.pool = Population(100, 0.01, 0.4, [-5, 5, 75])
 
         inputs = []
         desiredOutputs = []
@@ -353,63 +353,18 @@ class App:
         self.calculateGraph()
 
     def nextGen1(self):
-        inputs = []
-        desiredOutputs = []
-
-        for x in range(len(self.data)):
-            inputs.append(self.data[x][1:5])
-            desiredOutputs.append(self.data[x][5])
-
-        for x in range(1):
-            self.generationLabel.config(text='Generation: {}'.format(self.pool.currentGeneration))
-            self.pool.nextGeneration(self.network, inputs, desiredOutputs)
-            print(self.pool.currentGeneration, "Best Fitness :", self.pool.bestDNA.fitness)
-
-        self.calculateGraph()
-        self.a.clear()
-        self.a.plot(self.actualData)
-        self.a.plot(self.predictedData)
-        self.canvas.draw()
+        self.nextGenX(1)
 
     def nextGen10(self):
-        inputs = []
-        desiredOutputs = []
-
-        for x in range(len(self.data)):
-            inputs.append(self.data[x][1:5])
-            desiredOutputs.append(self.data[x][5])
-
-        for x in range(10):
-            self.generationLabel.config(text='Generation: {}'.format(self.pool.currentGeneration))
-            self.pool.nextGeneration(self.network, inputs, desiredOutputs)
-            print(self.pool.currentGeneration, "Best Fitness :", self.pool.bestDNA.fitness)
-
-        self.calculateGraph()
-        self.a.clear()
-        self.a.plot(self.actualData)
-        self.a.plot(self.predictedData)
-        self.canvas.draw()
+        self.nextGenX(10)
 
     def nextGen100(self):
-        inputs = []
-        desiredOutputs = []
-
-        for x in range(len(self.data)):
-            inputs.append(self.data[x][1:5])
-            desiredOutputs.append(self.data[x][5])
-
-        for x in range(100):
-            self.generationLabel.config(text='Generation: {}'.format(self.pool.currentGeneration))
-            self.pool.nextGeneration(self.network, inputs, desiredOutputs)
-            print(self.pool.currentGeneration, "Best Fitness :", self.pool.bestDNA.fitness)
-
-        self.calculateGraph()
-        self.a.clear()
-        self.a.plot(self.actualData)
-        self.a.plot(self.predictedData)
-        self.canvas.draw()
+        self.nextGenX(100)
 
     def nextGen1000(self):
+        self.nextGenX(1000)
+
+    def nextGenX(self, i):
         inputs = []
         desiredOutputs = []
 
@@ -417,10 +372,10 @@ class App:
             inputs.append(self.data[x][1:5])
             desiredOutputs.append(self.data[x][5])
 
-        for x in range(1000):
+        for x in range(i):
             self.generationLabel.config(text='Generation: {}'.format(self.pool.currentGeneration))
             self.pool.nextGeneration(self.network, inputs, desiredOutputs)
-            print(self.pool.currentGeneration, "Best Fitness :", self.pool.bestDNA.fitness)
+            print("Generation:", self.pool.currentGeneration, "Best Fitness :", self.pool.bestDNA.fitness)
 
         self.calculateGraph()
         self.a.clear()
@@ -510,8 +465,8 @@ class App:
             self.actualData.append(x[1])
             self.predictedData.append(x[1])
         # YOU CAN CHANGE NETWORK STRUCTURE AND POOL SETTINGS HERE
-        self.network = Network([4, 20, 20, 1])
-        self.pool = Population(100, 0.01, 0.4, [-5, 5, 500])
+        self.network = Network([4, 15, 1])
+        self.pool = Population(100, 0.01, 0.4, [-5, 5, 75])
         for x in range(len(self.pool.pool)):
             self.pool.pool[x].gene = self.export['pool'][x]['gene']
             self.pool.pool[x].fitness = float(self.export['pool'][x]['fitness'])
