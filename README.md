@@ -8,8 +8,8 @@ Alle code is volledig geschreven door **Matthias Krijgsman.**
 ####Korte Omschrijving
 Dit uitgebreide MiniProject is als afsluiting voor de cursus 'Python Programming' op de Hogeschool Utrecht.
 
-De applicatie heeft als doel om van een beurs genoteerd bedrijf, een analyse te maken om basis van de koers,
-en hierbij een poging doet om een voorspelling te maken.
+De applicatie heeft als doel om van een beurs genoteerd bedrijf, een koers analyse te maken,
+om vervolgens een poging te doen om een voorspelling te maken.
 
 ##Benodigdheden
 
